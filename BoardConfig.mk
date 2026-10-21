@@ -26,5 +26,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 44712755200
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# SELinux
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Inherit from the proprietary version
 -include vendor/sony/akatsuki/BoardConfigVendor.mk

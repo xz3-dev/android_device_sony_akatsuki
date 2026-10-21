@@ -1,0 +1,5 @@
+# NFC (Sony CXD224x with Rohm BD7602 regulator)
+/dev/bd7602-i2c                                                         u:object_r:nfc_device:s0
+/dev/cxd224x-i2c                                                        u:object_r:nfc_device:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service\.cxd22xx  u:object_r:hal_nfc_default_exec:s0
+/(vendor|system/vendor)/bin/snfcboot                                    u:object_r:snfcboot_exec:s0

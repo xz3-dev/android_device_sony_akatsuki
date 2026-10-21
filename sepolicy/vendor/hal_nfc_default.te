@@ -1,0 +1,2 @@
+# FW_PATCH in libnfc-cxd-224x02310011.conf: firmware patch download at HAL start
+r_dir_file(hal_nfc_default, vendor_firmware_file)
