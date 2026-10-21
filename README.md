@@ -33,3 +33,32 @@ $ fastboot flash system system.img
 $ fastboot -w reboot
 ```
 
+
+## 801SO build (branch `lineage-22.2-xz3`)
+
+This branch targets the SoftBank **801SO** and is synced with the local manifest
+from [xz3-dev/manifest](https://github.com/xz3-dev/manifest). On top of
+`lineage-22.2`:
+
+- **NFC**: Sony CXD224x controller (Carillon driver in
+  xz3-dev/android_kernel_sony_sdm845) with the 801SO HIDL NFC HAL 1.2,
+  `snfcboot`, firmware and configuration from `vendor/sony/xz3`. The NXP stack
+  is not built (`TARGET_USES_SONY_CXD224X_NFC`). The global models (H8416,
+  H9436, H9493) have no working NFC with this branch.
+- **Tap to wake**: `config_supportDoubleTapWake`; the power HAL switches
+  `/sys/devices/virtual/input/lge_touch/tap_to_wake` (tama-common).
+- **Dolby Atmos**: DMS HAL 2.0 init script, VINTF entries and enforcing
+  sepolicy; blobs and apps in `vendor/sony/xz3`.
+- **Camera**: GCam (`com.android.MGC_9_6_080.xz3`) replaces Aperture and is used
+  for the lock screen and power key shortcuts; the Sony camera provider loads
+  the RAW bridge `libcaminject.so` (`vendor/sony/xz3`).
+- **Camera button, notification light**: XperiaParts in tama-common
+  (Settings > System > Gestures > Camera button, Settings > Notifications >
+  Light for all notifications).
+- **Display modes**: LiveDisplay from tama-common (Professional, Standard,
+  Super-vivid).
+- **Updates**: `lineage.updater.uri` is built from `XZ3_OTA_HOST` in
+  `device.mk`.
+
+`vendor/sony/xz3` is private; see its README for `scripts/fetch-prebuilts.sh`,
+which has to run before `breakfast`.
