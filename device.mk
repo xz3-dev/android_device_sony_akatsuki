@@ -46,10 +46,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
 
 # NFC
+# The 801SO has a Sony CXD224x controller instead of the NXP PN553 of the global models.
+TARGET_USES_SONY_CXD224X_NFC := true
+
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp-octopus_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-octopus_RF.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf
+    $(LOCAL_PATH)/rootdir/etc/init.nfc.cxd224x.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.nfc.cxd224x.rc
 
 # Thermal
 PRODUCT_COPY_FILES += \

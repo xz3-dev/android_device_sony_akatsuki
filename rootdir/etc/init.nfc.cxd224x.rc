@@ -1,0 +1,17 @@
+# Sony CXD224x NFC controller (801SO). The Carillon driver is built into the kernel and creates
+# /dev/cxd224x-i2c (controller) and /dev/bd7602-i2c (its regulator).
+
+on post-fs-data
+    chown nfc nfc /dev/cxd224x-i2c
+    chmod 0660 /dev/cxd224x-i2c
+    chown nfc nfc /dev/bd7602-i2c
+    chmod 0660 /dev/bd7602-i2c
+
+on early-boot
+    # Configures the BD7602 outputs and powers the controller; the HAL cannot start without it.
+    exec -- /vendor/bin/snfcboot
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.cxd22xx
+    class hal
+    user nfc
+    group nfc
