@@ -1,0 +1,6 @@
+# Dolby apps (com.dolby.daxservice, com.dolby.daxappui2) are presigned privileged apps and
+# reach the DMS over HwBinder.
+hwbinder_use(priv_app)
+allow priv_app hal_dms_hwservice:hwservice_manager find;
+binder_call(priv_app, hal_dms_server)
+binder_call(hal_dms_server, priv_app)

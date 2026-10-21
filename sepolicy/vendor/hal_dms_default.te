@@ -1,0 +1,16 @@
+type hal_dms_default, domain;
+hal_server_domain(hal_dms_default, hal_dms)
+
+type hal_dms_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_dms_default)
+
+hwbinder_use(hal_dms_default)
+get_prop(hal_dms_default, hwservicemanager_prop)
+
+# /vendor/etc/dolby/dax-default.xml
+r_dir_file(hal_dms_default, vendor_configs_file)
+
+# Settings database in /data/vendor/dolby (sqlite)
+allow hal_dms_default vendor_data_file:dir search;
+allow hal_dms_default hal_dms_vendor_data_file:dir create_dir_perms;
+allow hal_dms_default hal_dms_vendor_data_file:file create_file_perms;

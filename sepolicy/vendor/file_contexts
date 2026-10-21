@@ -3,3 +3,7 @@
 /dev/cxd224x-i2c                                                        u:object_r:nfc_device:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service\.cxd22xx  u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/snfcboot                                    u:object_r:snfcboot_exec:s0
+
+# Dolby
+/data/vendor/dolby(/.*)?                                                u:object_r:hal_dms_vendor_data_file:s0
+/(odm|vendor/odm)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service      u:object_r:hal_dms_default_exec:s0

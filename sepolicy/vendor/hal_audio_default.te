@@ -1,0 +1,2 @@
+# The Dolby effects (libswdap and friends) run in the audio HAL and talk to the DMS.
+hal_client_domain(hal_audio_default, hal_dms)
