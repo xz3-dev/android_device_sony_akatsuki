@@ -13,6 +13,10 @@ $(call inherit-product-if-exists, vendor/sony/akatsuki/akatsuki-vendor.mk)
 TARGET_SCREEN_HEIGHT := 2880
 TARGET_SCREEN_WIDTH := 1440
 
+# Camera
+# GCam from vendor/sony/xz3 is the camera app; this drops Aperture.
+PRODUCT_NO_CAMERA := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \

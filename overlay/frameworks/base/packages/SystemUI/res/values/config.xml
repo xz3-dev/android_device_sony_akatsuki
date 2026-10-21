@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 xz3-dev
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Camera app used for the lock screen and power key double press shortcuts -->
+    <string name="config_cameraGesturePackage" translatable="false">com.android.MGC_9_6_080.xz3</string>
+</resources>
