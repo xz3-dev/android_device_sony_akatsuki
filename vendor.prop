@@ -4,3 +4,6 @@ bluetooth.device.default_name=Xperia XZ3
 # Display postprocessing
 vendor.display.enable_default_color_mode=1
 vendor.display.disable_hdr_lut_gen=1
+
+# Dolby
+ro.vendor.dolby.dax.version=DAX3_3.7.0.8_r1

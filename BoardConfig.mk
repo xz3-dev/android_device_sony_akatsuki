@@ -17,6 +17,7 @@ TARGET_KERNEL_CONFIG := tama_akatsuki_defconfig
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 # Partitions
 # Reserve space for data encryption (44712771584-16384)
