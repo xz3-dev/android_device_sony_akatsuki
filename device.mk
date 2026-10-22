@@ -74,6 +74,6 @@ PRODUCT_COPY_FILES += \
 # Updater
 # XZ3_OTA_HOST: public domain of the bucket that serves updates.json. Set it here or in the
 # build environment; the default (.invalid) never resolves, so the updater finds nothing.
-XZ3_OTA_HOST ?= ota.invalid
+XZ3_OTA_HOST ?= pub-1fad5a82f9534963a97b1cf7275dd35a.r2.dev
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     lineage.updater.uri=https://$(XZ3_OTA_HOST)/api/v1/{device}/{type}/updates.json
