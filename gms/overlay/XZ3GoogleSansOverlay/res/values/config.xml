@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 xz3-dev
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Families added to fonts_customization.xml by vendor/pixel/gsans -->
+    <string name="config_headlineFontFamily" translatable="false">google-sans</string>
+    <string name="config_headlineFontFamilyMedium" translatable="false">google-sans-medium</string>
+    <string name="config_headlineFontFeatureSettings" translatable="false">ss03</string>
+    <string name="config_bodyFontFamily" translatable="false">google-sans-text</string>
+    <string name="config_bodyFontFamilyMedium" translatable="false">google-sans-text-medium</string>
+    <string name="config_clockFontFamily" translatable="false">google-sans-clock</string>
+</resources>

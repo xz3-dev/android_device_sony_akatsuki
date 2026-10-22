@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 xz3-dev
+     SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <!-- Pixel features up to the last Snapdragon Pixels (2020 midyear). The 2021 and later
+         experiences are Tensor generations and enable features this SoC cannot run. -->
+    <feature name="com.google.android.feature.PIXEL_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2017_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2018_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2019_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2019_MIDYEAR_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2020_EXPERIENCE" />
+    <feature name="com.google.android.feature.PIXEL_2020_MIDYEAR_EXPERIENCE" />
+
+    <!-- Phone by Google: call recording -->
+    <feature name="com.google.android.apps.dialer.call_recording_audio" />
+
+    <!-- Pixel Launcher and Wallpaper & style -->
+    <install-in-user-type package="com.google.android.apps.nexuslauncher">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.apps.wallpaper">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.apps.wallpaper.pixel">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.apps.customization.pixel">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+</config>

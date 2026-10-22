@@ -59,6 +59,18 @@ from [xz3-dev/manifest](https://github.com/xz3-dev/manifest). On top of
   Super-vivid).
 - **Updates**: `lineage.updater.uri` is built from `XZ3_OTA_HOST` in
   `device.mk`.
+- **Google apps** (`WITH_GMS`, default `true`): `gms/gms.mk` installs a selection
+  of the PixelOS `vendor_gms-15` prebuilts (`vendor/gms`, Git LFS): Play
+  services, Play Store, Services Framework, setup wizard and restore, Pixel
+  Launcher with Android System Intelligence and Private Compute Services, the
+  Google app, Phone (call recording feature), Messages, Contacts, Clock,
+  Calculator, Gboard, Wallpaper & style, Pixel wallpapers and themes. Their
+  Soong overrides remove Trebuchet, Dialer, messaging, Contacts, DeskClock,
+  ExactCalculator, LatinIME and ThemePicker. Configuration (default apps,
+  launcher services, Pixel features up to 2020) lives in `gms/overlay` and
+  `gms/sysconfig`; no Google binaries are in this repository.
+  `XZ3_GOOGLE_SANS=false` drops Google Sans (`vendor/pixel/gsans`),
+  `XZ3_PIXEL_BOOTANIMATION=false` keeps the LineageOS boot animation.
 
 `vendor/sony/xz3` is private; see its README for `scripts/fetch-prebuilts.sh`,
 which has to run before `breakfast`.

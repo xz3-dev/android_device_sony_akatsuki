@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 xz3-dev
+     SPDX-License-Identifier: Apache-2.0
+-->
+<!-- Privileged permissions requested by the Google apps but missing from privapp-permissions-google-p.xml. -->
+<permissions>
+    <privapp-permissions package="com.google.android.deskclock">
+        <permission name="android.permission.SCHEDULE_EXACT_ALARM" />
+    </privapp-permissions>
+</permissions>

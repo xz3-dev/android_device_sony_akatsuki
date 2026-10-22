@@ -10,6 +10,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product-if-exists, vendor/sony/akatsuki/akatsuki-vendor.mk)
 $(call inherit-product, vendor/sony/xz3/xz3-vendor.mk)
 
+# Google apps
+WITH_GMS ?= true
+ifeq ($(WITH_GMS),true)
+$(call inherit-product, device/sony/akatsuki/gms/gms.mk)
+endif
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2880
 TARGET_SCREEN_WIDTH := 1440

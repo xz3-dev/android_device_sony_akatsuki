@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 xz3-dev
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xz3.overlay.googlesans">
+    <overlay
+        android:targetPackage="android"
+        android:isStatic="true"
+        android:priority="21" />
+</manifest>
