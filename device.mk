@@ -72,8 +72,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
 # Updater
-# XZ3_OTA_HOST: public domain of the bucket that serves updates.json. Set it here or in the
-# build environment; the default (.invalid) never resolves, so the updater finds nothing.
+# XZ3_OTA_HOST: public host of the bucket that serves updates.json; can be overridden from
+# the build environment.
 XZ3_OTA_HOST ?= pub-1fad5a82f9534963a97b1cf7275dd35a.r2.dev
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     lineage.updater.uri=https://$(XZ3_OTA_HOST)/api/v1/{device}/{type}/updates.json
