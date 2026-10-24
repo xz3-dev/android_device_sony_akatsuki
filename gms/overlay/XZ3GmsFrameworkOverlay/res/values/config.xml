@@ -7,7 +7,7 @@
     <!-- Pixel Launcher -->
     <string name="config_recentsComponentName" translatable="false">com.google.android.apps.nexuslauncher/com.android.quickstep.RecentsActivity</string>
     <string name="config_secondaryHomePackage" translatable="false">com.google.android.apps.nexuslauncher</string>
-    <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.as</string>
+    <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.as:org.lineageos.xperiaparts</string>
 
     <!-- Android System Intelligence: At a Glance, app predictions, app search and
          overview text selection for the launcher -->
